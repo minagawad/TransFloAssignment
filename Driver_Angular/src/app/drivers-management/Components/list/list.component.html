@@ -1,0 +1,34 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#id</th>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Email</th>
+      <th scope="col">PhoneNumber</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let driver of drivers">
+      <td>{{ driver.id }}</td>
+      <td>{{ driver.firstName }}</td>
+      <td>{{ driver.lastName }}</td>
+      <td>{{ driver.email }}</td>
+      <td>{{ driver.phoneNumber }}</td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-12">
+    <pagination [totalItems]="totalCount" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+  </div>
+</div>
+
